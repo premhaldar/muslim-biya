@@ -1,0 +1,81 @@
+.menu-link { 
+            position: relative; 
+            padding-bottom: 8px; 
+            transition: color 0.3s ease-in-out; /
+        }
+        .menu-link::after { 
+            content: ''; 
+            position: absolute; 
+            bottom: 0; 
+            left: 0; 
+            width: 0; 
+            height: 3px;
+            background-color: #e02a91; 
+            transition: width 0.3s ease-in-out; 
+        }
+        .menu-link:hover::after { 
+            width: 100%; 
+        }
+         .hero-background {
+        background-image:url('../assets/image/banner.png');
+        background-size: cover;
+        background-position: center;
+    }
+    .content{
+        padding-bottom: 120px;
+    }
+    #search-partner{
+        background-image: url(../assets/image/background.png);
+        background-repeat: repeat;
+    background-position: center;
+    }
+    .leading-tight{
+        color:#dc0481 ;
+    }
+    .text{
+        color:#3c3c3c ;
+        font-weight: bold;
+    }
+    .text-gray{
+        color: #771d83;
+    }
+    
+    .bg{
+        background: #dc0481;
+    }
+    /* moneybag */
+    #money-back-guarantee{
+        background-color: rgb(236, 228, 228);
+    }
+    /*  */
+    #features{
+        background-image: url(../assets/image/background.png);
+    }
+    .border-2{
+        border-color: #dc0481;
+    }
+    .text-color{
+        color: #dc0481;
+    }
+    /* success story */
+    .pad{
+
+        /* margin-left: 180px; */
+    }
+    /* mega-offer */
+    #mega-offer{
+        background-image: url(../assets/image/background.png);
+    }
+    /* faq sectation */
+    #faq{
+        background-image: url(../assets/image/background.png);
+    }
+    /* how-to-search */
+    #how-to-search{
+        background-color: rgb(236, 228, 228);
+        background-image: url(../assets/image/background.png);
+    }
+    /* copy-color */
+    .copy-color{
+        background-color: #771d83;
+    }

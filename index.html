@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>মুসলিম বিয়ে</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#7c0e83",
+              secondary: "#D11343",
+              "text-dark": "#525252",
+            },
+            fontFamily: { sans: ["Baloo Da 2", "sans-serif"] },
+            maxWidth: {
+              "nav-container": "1200px",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-gray-100">
+    <!-- Navbar Section -->
+    <header class="bg-white shadow-md w-full sticky top-0 z-50">
+      <nav
+        class="max-w-nav-container mx-auto px-4 flex justify-between items-center py-3"
+      >
+        <a href="#"
+          ><img
+            src="assets/image/logo.png"
+            alt="মুসলিম বিয়ে লোগো"
+            class="w-40 h-auto"
+        /></a>
+        <ul
+          class="hidden lg:flex items-center space-x-8 font-semibold text-text-dark"
+        >
+          <li><a href="#" class="menu-link hover:text-secondary">হোম</a></li>
+          <li>
+            <a href="#" class="menu-link hover:text-secondary"
+              >আমাদের সম্পর্কে</a
+            >
+          </li>
+          <li>
+            <a href="#" class="menu-link hover:text-secondary">সফলতার গল্প</a>
+          </li>
+          <li>
+            <a href="#" class="menu-link hover:text-secondary">নির্দেশনা</a>
+          </li>
+          <li>
+            <a href="#" class="menu-link hover:text-secondary">যোগাযোগ</a>
+          </li>
+        </ul>
+        <div class="hidden lg:flex items-center space-x-4">
+          <button
+            id="btn-bangla"
+            class="toggle-btn bg-white border-2 border-primary text-primary font-semibold py-2 px-5 rounded-lg transition-all duration-300"
+          >
+            বাংলা <i class="fas fa-arrow-right ml-1 text-xs"></i>
+          </button>
+          <button
+            id="btn-login"
+            class="toggle-btn bg-primary text-white font-semibold py-2 px-5 rounded-lg border-2 border-primary transition-all duration-300"
+          >
+            লগ ইন <i class="fas fa-arrow-right ml-1 text-xs"></i>
+          </button>
+        </div>
+        <button
+          id="mobile-menu-button"
+          class="lg:hidden text-text-dark text-2xl"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section id="hero" class="hero-background text-white">
+    
+        <div class="container mx-auto px-6 py-24 md:py-32">
+          <div
+            class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 content"
+          >
+            <div class="w-full md:w-auto text-center md:text-left">
+              <h2 class="text-2xl font-semibold">বাংলাদেশি ম্যাট্রিমনি</h2>
+              <h1 class="text-6xl md:text-8xl font-extrabold my-2 md:my-4">
+                মুসলিম বিয়ে
+              </h1>
+              <p class="text-lg md:text-xl max-w-lg">
+                নিজ জেলা/উপজেলায় উপযুক্ত জীবনসঙ্গী খুঁজে পাওয়া <br> এখন খুবই সহজ।
+              </p>
+            </div>
+            <div class="w-full md:w-auto flex justify-center">
+              <img
+                src="assets/image/car.png"
+                alt="Just Married Car"
+                class="w-80 md:w-[500px]"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Search Partner Section -->
+    <section id="search-partner" class="relative z-10">
+      <div class="max-w-5xl mx-auto px-4">
+        <div
+          class="bg-white rounded-2xl shadow-xl p-8 md:p-8 mt-[-110px] relative"
+        >
+          <form action="#" class="pb-5">
+            <!-- Grid layout for filter fields -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              <!-- Filter 1: Looking For -->
+              <div>
+                <label
+                  for="looking-for"
+                  class="block font-semibold text-primary mb-2"
+                  >আমি খুঁজছি</label
+                >
+                <select
+                  id="looking-for"
+                  name="looking-for"
+                  class="w-full p-3 border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-primary"
+                >
+                  <option selected disabled>নির্বাচন করুন</option>
+                  <option value="groom">পাত্র</option>
+                  <option value="bride">পাত্রী</option>
+                </select>
+              </div>
+
+              <!-- Filter 2: Marital Status -->
+              <div>
+                <label
+                  for="marital-status"
+                  class="block font-semibold text-primary mb-2"
+                  >বৈবাহিক অবস্থা</label
+                >
+                <select
+                  id="marital-status"
+                  name="marital-status"
+                  class="w-full p-3 border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-primary"
+                >
+                  <option selected disabled>নির্বাচন করুন</option>
+                  <option value="never_married">বিবাহিত নন</option>
+                  <option value="divorced">ডিভোর্সড</option>
+                  <option value="widowed">বিধবা/বিপত্নীক</option>
+                </select>
+              </div>
+
+              <!-- Filter 3: Biodata Type -->
+              <div>
+                <label
+                  for="biodata-type"
+                  class="block font-semibold text-primary mb-2"
+                  >বায়োডাটার ধরণ</label
+                >
+                <select
+                  id="biodata-type"
+                  name="biodata-type"
+                  class="w-full p-3 border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-primary"
+                >
+                  <option selected disabled>নির্বাচন করুন</option>
+                  <option value="general">সাধারণ</option>
+                  <option value="professional">পেশাজীবী</option>
+                  <option value="student">ছাত্র/ছাত্রী</option>
+                </select>
+              </div>
+
+              <!-- Filter 4: Permanent Address -->
+              <div>
+                <label
+                  for="address"
+                  class="block font-semibold text-primary mb-2"
+                  >স্থায়ী ঠিকানা</label
+                >
+                <select
+                  id="address"
+                  name="address"
+                  class="w-full p-3 border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-primary"
+                >
+                  <option selected disabled>নির্বাচন করুন</option>
+                  <option value="dhaka">ঢাকা</option>
+                  <option value="chittagong">চট্টগ্রাম</option>
+                  <option value="sylhet">সিলেট</option>
+                  <option value="khulna">খুলনা</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Search Button Container - Positioned absolutely -->
+            <div
+              class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2"
+            >
+              <button
+                type="submit"
+                class="bg-primary text-white font-bold py-3 px-12 rounded-lg flex items-center gap-2 mx-auto hover:bg-purple-800 transition-colors duration-300 shadow-lg"
+              >
+                <i class="fas fa-search"></i>
+                <span>খুঁজুন</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Submit Biodata CTA Section -->
+    <section
+      id="submit-biodata-cta"
+      class="relative overflow-hidden py-24 md:py-24"
+    >
+      <!-- Background Pattern -->
+      <div
+        class="absolute inset-0 z-0 opacity-100"
+        style="
+          background-image: url('assets/image/background.png');
+          background-repeat: repeat;
+          background-size: auto;
+        "
+      ></div>
+
+      <!-- Main Content -->
+      <div class="relative z-10 max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <!-- Left Column: Image -->
+          <div class="flex justify-center">
+            <img
+              src="assets/image/moniter.png"
+              alt="বায়োডাটা সাবমিট করুন"
+              class="w-full max-w-lg h-auto"
+            />
+          </div>
+
+          <!-- Right Column: Text and Buttons -->
+          <div class="text-center lg:text-left">
+            <p class="text-xl md:text-2xl text">মনের মত জীবনসঙ্গী খুঁজে পেতে</p>
+
+            <h2 class="text-4xl md:text-5xl font-extrabold my-3 leading-tight">
+              বায়োডাটা সাবমিট করুন
+            </h2>
+
+            <p class="text-2xl md:text-3xl text-gray font-bold mb-8">
+              সম্পূর্ণ বিনামূল্যে
+            </p>
+
+            <!-- Action Buttons -->
+            <div
+              class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4"
+            >
+              <!-- Button 1: Create Biodata -->
+              <a
+                href="#"
+                class="bg text-white font-bold py-3 px-6 rounded-lg flex items-center gap-2 transition-colors duration-300 hover:bg-red-700 shadow-md w-full sm:w-auto justify-center"
+              >
+                <i class="fas fa-plus-circle"></i>
+                <span>বায়োডাটা তৈরি করুন</span>
+              </a>
+              <!-- Button 2: How to Create -->
+              <a
+                href="#"
+                class="bg-primary text-white font-bold py-3 px-6 rounded-lg flex items-center gap-2 transition-colors duration-300 hover:bg-purple-800 shadow-md w-full sm:w-auto justify-center"
+              >
+                <i class="fas fa-plus-circle"></i>
+                <span>যেভাবে বায়োডাটা তৈরি করবেন</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Money-Back Guarantee Section -->
+    <section
+      id="money-back-guarantee"
+      class="relative overflow-hidden bg-white py-16 md:py-24"
+    >
+      <!-- Background Pattern -->
+      <div
+        class="absolute inset-0 z-0 opacity-100"
+        style="
+          background-image: url('assets/image/background.png');
+          background-repeat: repeat;
+          background-size: auto;
+        "
+      ></div>
+
+      <!-- Main Content -->
+      <div class="relative z-10 max-w-7xl mx-auto px-4">
+        <!-- Grid layout - on large screens, reverse the order -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <!-- Left Column: Text and Button (On mobile, this appears first) -->
+          <div class="text-right ">
+            <h2
+              class="text-4xl md:text-5xl font-extrabold leading-tight"
+            >
+              মানিব্যাগ গ্যারান্টি
+            </h2>
+            <p class="text-xl md:text-2xl text-primary font-semibold mt-2">
+              অসম্পূর্ণ ম্যাচিংএ ৫০% রিফান্ড গ্যারান্টি
+            </p>
+
+            
+            <div class="mt-6 text-right">
+              <a
+                href="#"
+                class="inline-block bg text-white font-bold py-2 px-6 rounded-lg text-sm transition-colors duration-300 hover:bg-purple-800 shadow-md"
+              >
+                <i class="fas fa-plus mr-1"></i> বিস্তারিত দেখুন
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Image  -->
+          <div class="flex justify-center lg:justify-start">
+            <img
+              src="assets/image/moneybag.png"
+              alt="মানিব্যাগ গ্যারান্টি ইলাস্ট্রেশন"
+              class="w-full max-w-3xl h-auto"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+   
+
+<!-- Features Section -->
+<section id="features" class="py-16 md:py-24">
+    <div class="max-w-5xl mx-auto px-4">
+
+        <!-- Section Title Tag -->
+        <div class="relative flex justify-center z-10">
+            <span class="bg text-white font-bold py-2 px-8 rounded-md text-lg">
+                বাংলাদেশের সেরা ম্যাচমেকার
+            </span>
+        </div>
+
+        <!-- Main Features Box -->
+        <div class="bg-white border-2 rounded-2xl shadow-lg p-8 md:p-12 -mt-5 pt-16">
+            
+            <!-- Features Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                
+                <!-- Feature 1: Perfect Match -->
+                <div class="flex flex-col items-center">
+                    <!-- Icon Circle -->
+                    <div class="w-28 h-28 bg-primary rounded-full flex items-center justify-center">
+                        <i class="fas fa-heart text-white text-4xl"></i>
+                    </div>
+                    <!-- Text -->
+                    <p class="mt-5 text-2xl font-bold text-color">
+                        পারফেক্ট ম্যাচ
+                    </p>
+                </div>
+
+                <!-- Feature 2: Verified -->
+                <div class="flex flex-col items-center">
+                    <!-- Icon Circle -->
+                    <div class="w-28 h-28 bg-primary rounded-full flex items-center justify-center">
+                        <i class="fas fa-check-double text-white text-4xl"></i>
+                    </div>
+                    <!-- Text -->
+                    <p class="mt-5 text-2xl font-bold text-color">
+                        ৩ স্তরের ভেরিফাইড
+                    </p>
+                </div>
+
+                <!-- Feature 3: Secure -->
+                <div class="flex flex-col items-center">
+                    <!-- Icon Circle -->
+                    <div class="w-28 h-28 bg-primary rounded-full flex items-center justify-center">
+                        <i class="fas fa-shield-alt text-white text-4xl"></i>
+                    </div>
+                    <!-- Text -->
+                    <p class="mt-5 text-2xl font-bold text-color">
+                        ১০০% নিরাপদ
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Success Stats Section -->
+<section id="success-stats" 
+         class="relative bg-cover bg-center bg-no-repeat py-16 md:py-24" 
+         style="background-image: url('assets/image/success.png');">
+    
+    <!-- Semi-transparent overlay to make text readable -->
+    <div class="absolute inset-0 "></div>
+
+    <!-- Main Content -->
+    <div class="relative z-10 max-w-7xl mx-auto px-4 text-center text-white">
+        
+        <!-- Section Header -->
+        <div class="mb-12 md:mb-16">
+            <h2 class="text-8xl md:text-7xl font-extrabold  leading-tight">মুসলিম বিয়ের</h2>
+            <p class="inline-block mt-2 bg-primary text-white  py-2 px-6 rounded-md text-5xl pad">
+                সফলতার পরিসংখ্যান
+            </p>
+        </div>
+
+        <!-- Stats Grid  -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    
+    <!-- Stat 1: Successful Marriages -->
+    <div class="bg-primary rounded-2xl p-8 flex flex-col justify-center items-center aspect-square">
+        <span class="counter text-4xl font-bold" data-target="5000" data-suffix="+">0</span>
+        <p class="mt-2 text-lg">সফল বিয়ে</p>
+    </div>
+
+    <!-- Stat 2: Total Biodatas -->
+    <div class="bg-primary rounded-2xl p-8 flex flex-col justify-center items-center aspect-square">
+        <span class="counter text-4xl font-bold" data-target="50000" data-suffix="+">0</span>
+        <p class="mt-2 text-lg">মোট বায়োডাটা</p>
+    </div>
+
+    <!-- Stat 3: Grooms -->
+    <div class="bg-primary rounded-2xl p-8 flex flex-col justify-center items-center aspect-square">
+        <span class="counter text-4xl font-bold" data-target="30000" data-suffix="+">0</span>
+        <p class="mt-2 text-lg">পাত্রের বায়োডাটা</p>
+    </div>
+
+    <!-- Stat 4: Brides -->
+    <div class="bg-primary rounded-2xl p-8 flex flex-col justify-center items-center aspect-square">
+        <span class="counter text-4xl font-bold" data-target="20000" data-suffix="+">0</span>
+        <p class="mt-2 text-lg">পাত্রীর বায়োডাটা</p>
+    </div>
+
+</div>
+        
+
+    </div>
+</section>
+<!-- Mega Offer CTA Section -->
+<section id="mega-offer" class="bg-white py-16 md:py-24 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4">
+        
+        <!-- Main Grid Layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center">
+            
+            <!-- Left Column: Illustration -->
+            <div class="flex justify-center">
+                <img src="assets/image/free-gift.png" alt="মুসলিম বিয়ে মেগা অফার" class="w-full max-w-5xl">
+            </div>
+
+            <!-- Right Column: Text Content -->
+            <div class="text-center lg:text-center">
+                
+                <!-- Headline -->
+                <h2 class="text-4xl md:text-5xl font-bold text-primary leading-tight">
+                    শুধুমাত্র প্রথম <br> ৩,০০০ জনের জন্য!
+                </h2>
+
+                <!-- Sub-headline -->
+                <p class="mt-4 text-xl font-semibold text">
+                    আপনি মিস করছেন <span class="text-color font-bold text-4xl md:text-3xl">১০টি</span> এক্সক্লুসিভ <br> কানেকশন!
+                </p>
+
+                <!-- Concluding text -->
+                <p class="mt-6 text-lg text-text-dark">
+                    তবে এখনো সুযোগ আছে- একেবারে <span class="font-bold text-color">ফ্রি</span> <br> তে পেতে পারেন।
+                </p>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!--  How to Search Section  -->
+<section id="how-to-search" class="bg-gray-50 py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4">
+
+        <!-- Section Header -->
+        <div class="text-center mb-12 md:mb-16">
+            <div class="relative inline-flex flex-col items-center">
+                
+                <!-- প্রথম শিরোনাম -->
+                <p class="text-xl md:text-5xl py-10 font-semibold text-primary">মুসলিমবিয়ে-প্ল্যাটফর্মে যেভাবে</p>
+                
+                <!-- দ্বিতীয় শিরোনাম -->
+                <h2 class="text-5xl md:text-6xl font-extrabold text-color">জীবনসঙ্গী খুঁজবেন</h2>
+
+                <!-- heard icon container -->
+                <div class="absolute -top-12 -right-12 md:-right-20 w-20 h-20">
+                    <!-- heard icon -->
+                    <img src="assets/image/heart.png" alt="Heart Icon" class="absolute top-0 right-0 h-35 w-auto z-10">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Steps Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Step 1 -->
+            <div class="bg-primary text-white rounded-2xl p-8 text-center shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                <span class="block text-6xl font-bold text-secondary mb-3">১</span>
+                <h3 class="text-xl font-bold mb-2">রেজিস্ট্রেশন করুন</h3>
+                <p class="text-gray-200">আপনার সকল সঠিক তথ্য দিয়ে বিনামূল্যে একটি আকর্ষণীয় বায়োডাটা তৈরি করুন।</p>
+            </div>
+            <!-- Step 2 -->
+            <div class="bg-primary text-white rounded-2xl p-8 text-center shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                <span class="block text-6xl font-bold text-secondary mb-3">২</span>
+                <h3 class="text-xl font-bold mb-2">বায়োডাটা খুঁজুন</h3>
+                <p class="text-gray-200">আমাদের বিশাল সংগ্রহ থেকে আপনার পছন্দ অনুযায়ী ফিল্টার করে জীবনসঙ্গী খুঁজুন।</p>
+            </div>
+            <!-- Step 3 -->
+            <div class="bg-primary text-white rounded-2xl p-8 text-center shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                <span class="block text-6xl font-bold text-secondary mb-3">৩</span>
+                <h3 class="text-xl font-bold mb-2">যোগাযোগ করুন</h3>
+                <p class="text-gray-200">পছন্দের বায়োডাটার অভিভাবকের সাথে সরাসরি ও নিরাপদে যোগাযোগ করুন।</p>
+            </div>
+            <!-- Step 4 -->
+            <div class="bg-primary text-white rounded-2xl p-8 text-center shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                <span class="block text-6xl font-bold text-secondary mb-3">৪</span>
+                <h3 class="text-xl font-bold mb-2">পরিবারকে জানান</h3>
+                <p class="text-gray-200">দুই পরিবার সম্মত হলে বাকি আলোচনা এগিয়ে নিয়ে যান এবং শুভ কাজটি সম্পন্ন করুন।</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- FAQ Section -->
+<section id="faq" class="bg-gray-50 py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4">
+        
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-primary">সাধারণ জিজ্ঞাসা</h2>
+            <p class="text-lg text-text-dark mt-4 max-w-2xl mx-auto">
+                মুসলিম বিয়ে সংক্রান্ত সাধারণ প্রশ্ন এবং উত্তরসমূহ।
+            </p>
+        </div>
+
+        <!-- Accordion Container -->
+        <div class="space-y-4">
+            
+            <!-- FAQ Item 1 -->
+            <div class="bg-white rounded-lg shadow-sm border border-gray-200">
+                <!-- Question Button -->
+                <button class="accordion-toggle flex justify-between items-center w-full p-5 text-left">
+                    <span class="text-lg font-semibold text-gray-800">মুসলিম বিয়ে ওয়েবসাইটে বায়োডাটা তৈরি করতে টাকা লাগে?</span>
+                    <i class="fas fa-plus text-primary transition-transform duration-300"></i>
+                </button>
+                <!-- Answer Panel -->
+                <div class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                    <p class="p-5 pt-0 text-text-dark">
+                        না, মুসলিম বিয়ে ওয়েবসাইটে বায়োডাটা তৈরি করা সম্পূর্ণ বিনামূল্যে। আপনি কোনো খরচ ছাড়াই আপনার বায়োডাটা তৈরি, প্রকাশ এবং তথ্য যোগ করতে পারবেন।
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="bg-white rounded-lg shadow-sm border border-gray-200">
+                <button class="accordion-toggle flex justify-between items-center w-full p-5 text-left">
+                    <span class="text-lg font-semibold text-gray-800">আমার তথ্য কি নিরাপদ থাকবে?</span>
+                    <i class="fas fa-plus text-primary transition-transform duration-300"></i>
+                </button>
+                <div class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                    <p class="p-5 pt-0 text-text-dark">
+                        আপনার তথ্যের গোপনীয়তা এবং নিরাপত্তা আমাদের কাছে সর্বোচ্চ অগ্রাধিকার পায়। আমরা guardian contact number এবং অন্যান্য সংবেদনশীল তথ্য অভিভাবকের অনুমতি ছাড়া প্রকাশ করি না। আপনার বায়োডাটা শুধুমাত্র রেজিস্টার্ড ব্যবহারকারীরাই দেখতে পারবেন।
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="bg-white rounded-lg shadow-sm border border-gray-200">
+                <button class="accordion-toggle flex justify-between items-center w-full p-5 text-left">
+                    <span class="text-lg font-semibold text-gray-800">বায়োডাটা দেখার জন্য কি পেমেন্ট করতে হয়?</span>
+                    <i class="fas fa-plus text-primary transition-transform duration-300"></i>
+                </button>
+                <div class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                    <p class="p-5 pt-0 text-text-dark">
+                        অন্যের বায়োডাটার সম্পূর্ণ তথ্য (যেমন: অভিভাবকের ফোন নম্বর) দেখতে একটি নির্দিষ্ট ফি প্রদান করতে হয়। এটি আমাদের প্ল্যাটফর্মের রক্ষণাবেক্ষণ এবং ভেরিফিকেশন প্রক্রিয়ার জন্য ব্যবহার করা হয়, যা আপনাকে একটি নিরাপদ অভিজ্ঞতা প্রদান করে।
+                    </p>
+                </div>
+            </div>
+            
+            <!-- আরও প্রশ্ন এখানে যোগ করতে পারেন -->
+
+        </div>
+    </div>
+</section>
+
+<!--      Footer Section       -->
+
+
+<footer id="footer">
+    <div class="bg-gradient-to-b from-primary to-secondary text-white py-16 md:py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold">গুরুত্বপূর্ণ লিঙ্কসমূহ</h2>
+            </div>
+            
+            <!-- Footer Links Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Link Box 1: About Us -->
+                <a href="#" class="block border-2 border-white/50 rounded-2xl p-6 text-center aspect-square flex flex-col justify-center items-center hover:bg-white/10 hover:border-white transition-all duration-300">
+                    <i class="fas fa-info-circle text-4xl mb-3"></i>
+                    <span class="text-lg font-semibold">আমাদের সম্পর্কে</span>
+                </a>
+
+                <!-- Link Box 2: Contact -->
+                <a href="#" class="block border-2 border-white/50 rounded-2xl p-6 text-center aspect-square flex flex-col justify-center items-center hover:bg-white/10 hover:border-white transition-all duration-300">
+                    <i class="fas fa-headset text-4xl mb-3"></i>
+                    <span class="text-lg font-semibold">যোগাযোগ</span>
+                </a>
+
+                <!-- Link Box 3: Privacy Policy -->
+                <a href="#" class="block border-2 border-white/50 rounded-2xl p-6 text-center aspect-square flex flex-col justify-center items-center hover:bg-white/10 hover:border-white transition-all duration-300">
+                    <i class="fas fa-shield-alt text-4xl mb-3"></i>
+                    <span class="text-lg font-semibold">প্রাইভেসি পলিসি</span>
+                </a>
+
+                <!-- Link Box 4: Terms of Service -->
+                <a href="#" class="block border-2 border-white/50 rounded-2xl p-6 text-center aspect-square flex flex-col justify-center items-center hover:bg-white/10 hover:border-white transition-all duration-300">
+                    <i class="fas fa-file-contract text-4xl mb-3"></i>
+                    <span class="text-lg font-semibold">শর্তাবলী</span>
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright Bar -->
+    <div class="copy-color py-4"> 
+        <div class="max-w-15xl mx-auto px-4 text-center">
+            <p class="text-white/90 text-xl">
+                All rights reserved &copy; 2025 muslimbie.com
+            </p>
+        </div>
+    </div>
+
+</footer>
+
+
+
+
+
+
+  </body>
+      
+    <!-- js start -->
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+
+        // ১. ন্যাভবারের টগল বাটনগুলোর জন্য কোড
+        const toggleButtons = document.querySelectorAll(".toggle-btn");
+        toggleButtons.forEach((clickedButton) => {
+          clickedButton.addEventListener("click", function () {
+            toggleButtons.forEach((btn) => {
+              btn.classList.remove("bg-primary", "text-white");
+              btn.classList.add("bg-white", "text-primary");
+            });
+            clickedButton.classList.remove("bg-white", "text-primary");
+            clickedButton.classList.add("bg-primary", "text-white");
+          });
+        });
+
+        // ২. FAQ অ্যাকর্ডিয়নের জন্য কোড
+        const accordions = document.querySelectorAll('.accordion-toggle');
+        accordions.forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    icon.classList.remove('fa-minus', 'rotate-90');
+                    icon.classList.add('fa-plus');
+                } else {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    icon.classList.remove('fa-plus');
+                    icon.classList.add('fa-minus', 'rotate-90');
+                }
+            });
+        });
+
+        // ৩. সংখ্যা গণনা অ্যানিমেশনের জন্য কোড
+        function animateCounters() {
+            const counters = document.querySelectorAll('.counter');
+            const animationDuration = 2000;
+
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const suffix = counter.getAttribute('data-suffix') || '';
+                let currentNumber = 0;
+                const increment = target / (animationDuration / 16);
+
+                const updateCounter = () => {
+                    currentNumber += increment;
+                    if (currentNumber < target) {
+                        counter.innerText = Math.ceil(currentNumber).toLocaleString('en-US') + suffix;
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.innerText = target.toLocaleString('en-US') + suffix;
+                    }
+                };
+                updateCounter();
+            });
+        }
+
+        const statsSection = document.querySelector('#success-stats');
+        let hasAnimated = false;
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !hasAnimated) {
+                    animateCounters();
+                    hasAnimated = true;
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+
+      });
+    </script>
+    
+</body>
+</html>
+    
+</html>
