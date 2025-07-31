@@ -38,57 +38,51 @@
   </head>
   <body class="bg-gray-100">
     <!-- Navbar Section -->
-    <header class="bg-white shadow-md w-full sticky top-0 z-50">
-      <nav
-        class="max-w-nav-container mx-auto px-4 flex justify-between items-center py-3"
-      >
-        <a href="#"
-          ><img
-            src="assets/image/logo.png"
-            alt="মুসলিম বিয়ে লোগো"
-            class="w-40 h-auto"
-        /></a>
-        <ul
-          class="hidden lg:flex items-center space-x-8 font-semibold text-text-dark"
-        >
-          <li><a href="#" class="menu-link hover:text-secondary">হোম</a></li>
-          <li>
-            <a href="#" class="menu-link hover:text-secondary"
-              >আমাদের সম্পর্কে</a
-            >
-          </li>
-          <li>
-            <a href="#" class="menu-link hover:text-secondary">সফলতার গল্প</a>
-          </li>
-          <li>
-            <a href="#" class="menu-link hover:text-secondary">নির্দেশনা</a>
-          </li>
-          <li>
-            <a href="#" class="menu-link hover:text-secondary">যোগাযোগ</a>
-          </li>
+    
+<!--   Header Section   -->
+<header class="bg-white shadow-md w-full sticky top-0 z-50">
+    <!-- Main Navbar -->
+    <nav class="max-w-nav-container mx-auto px-4 flex justify-between items-center py-3">
+        <a href="#"><img src="assets/image/logo.png" alt="মুসলিম বিয়ে লোগো" class="w-40 h-auto"></a>
+        
+        <!-- Desktop Menu (বড় স্ক্রিনের জন্য) -->
+        <ul class="hidden lg:flex items-center space-x-8 font-semibold text-text-dark">
+            <li><a href="#" class="menu-link hover:text-secondary">হোম</a></li>
+            <li><a href="#" class="menu-link hover:text-secondary">আমাদের সম্পর্কে</a></li>
+            <li><a href="#" class="menu-link hover:text-secondary">সফলতার গল্প</a></li>
+            <li><a href="#" class="menu-link hover:text-secondary">নির্দেশনা</a></li>
+            <li><a href="#" class="menu-link hover:text-secondary">যোগাযোগ</a></li>
         </ul>
+
+        <!-- Desktop Buttons -->
         <div class="hidden lg:flex items-center space-x-4">
-          <button
-            id="btn-bangla"
-            class="toggle-btn bg-white border-2 border-primary text-primary font-semibold py-2 px-5 rounded-lg transition-all duration-300"
-          >
-            বাংলা <i class="fas fa-arrow-right ml-1 text-xs"></i>
-          </button>
-          <button
-            id="btn-login"
-            class="toggle-btn bg-primary text-white font-semibold py-2 px-5 rounded-lg border-2 border-primary transition-all duration-300"
-          >
-            লগ ইন <i class="fas fa-arrow-right ml-1 text-xs"></i>
-          </button>
+            <button id="btn-bangla" class="toggle-btn bg-white border-2 border-primary text-primary font-semibold py-2 px-5 rounded-lg transition-all duration-300">বাংলা <i class="fas fa-arrow-right ml-1 text-xs"></i></button>
+            <button id="btn-login" class="toggle-btn bg-primary text-white font-semibold py-2 px-5 rounded-lg border-2 border-primary transition-all duration-300">লগ ইন <i class="fas fa-arrow-right ml-1 text-xs"></i></button>
         </div>
-        <button
-          id="mobile-menu-button"
-          class="lg:hidden text-text-dark text-2xl"
-        >
-          <i class="fas fa-bars"></i>
+
+        <!-- Mobile Menu Button  -->
+        <button id="mobile-menu-button" class="lg:hidden text-text-dark text-2xl">
+            
+            <i class="fas fa-bars"></i>
         </button>
-      </nav>
-    </header>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden">
+        <ul class="flex flex-col items-center space-y-4 py-4 font-semibold text-text-dark bg-white shadow-md">
+            <li><a href="#" class="menu-link hover:text-secondary">হোম</a></li>
+            <li><a href="#" class="menu-link hover:text-secondary">আমাদের সম্পর্কে</a></li>
+            <li><a href="#" class="menu-link hover:text-secondary">সফলতার গল্প</a></li>
+            <li><a href="#" class="menu-link hover:text-secondary">নির্দেশনা</a></li>
+            <li><a href="#" class="menu-link hover:text-secondary">যোগাযোগ</a></li>
+        </ul>
+        <!-- মোবাইল মেনুর বাটনগুলো -->
+        <div class="flex flex-col items-center space-y-4 p-4 bg-white border-t border-gray-100">
+            <button class="toggle-btn bg-white border-2 border-primary text-primary font-semibold py-2 px-5 rounded-lg w-full">বাংলা <i class="fas fa-arrow-right ml-1 text-xs"></i></button>
+            <button class="toggle-btn bg-primary text-white font-semibold py-2 px-5 rounded-lg border-2 border-primary w-full">লগ ইন <i class="fas fa-arrow-right ml-1 text-xs"></i></button>
+        </div>
+    </div>
+</header>
 
     <main>
       <!-- Hero Section -->
@@ -98,20 +92,17 @@
           <div
             class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 content"
           >
-            <div class="w-full md:w-auto text-center md:text-left">
-              <h2 class="text-2xl font-semibold">বাংলাদেশি ম্যাট্রিমনি</h2>
-              <h1 class="text-6xl md:text-8xl font-extrabold my-2 md:my-4">
-                মুসলিম বিয়ে
-              </h1>
-              <p class="text-lg md:text-xl max-w-lg">
-                নিজ জেলা/উপজেলায় উপযুক্ত জীবনসঙ্গী খুঁজে পাওয়া <br> এখন খুবই সহজ।
-              </p>
-            </div>
+            <!-- নতুন কোড -->
+<div class="w-full md:w-auto text-center md:text-left">
+    <h2 class="text-2xl font-semibold animate-text" style="animation-delay: 0.2s;">বাংলাদেশি ম্যাট্রিমনি</h2>
+    <h1 class="text-6xl md:text-8xl font-extrabold my-2 md:my-4 animate-text" style="animation-delay: 0.4s;">মুসলিম বিয়ে</h1>
+    <p class="text-lg md:text-xl max-w-lg animate-text" style="animation-delay: 0.6s;">নিজ জেলা/উপজেলায় উপযুক্ত জীবনসঙ্গী খুঁজে পাওয়া এখন খুবই সহজ।</p>
+</div>
             <div class="w-full md:w-auto flex justify-center">
               <img
                 src="assets/image/car.png"
                 alt="Just Married Car"
-                class="w-80 md:w-[500px]"
+                class="w-80 md:w-[500px] animate-car"
               />
             </div>
           </div>
@@ -244,7 +235,7 @@
             <img
               src="assets/image/moniter.png"
               alt="বায়োডাটা সাবমিট করুন"
-              class="w-full max-w-lg h-auto"
+              class="w-full max-w-lg h-auto animate-illustration"
             />
           </div>
 
@@ -332,7 +323,7 @@
             <img
               src="assets/image/moneybag.png"
               alt="মানিব্যাগ গ্যারান্টি ইলাস্ট্রেশন"
-              class="w-full max-w-3xl h-auto"
+              class="w-full max-w-3xl h-auto animate-guarantee"
             />
           </div>
         </div>
@@ -420,7 +411,7 @@
         </div>
 
         <!-- Stats Grid  -->
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<div id="stats-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
     
     <!-- Stat 1: Successful Marriages -->
     <div class="bg-primary rounded-2xl p-8 flex flex-col justify-center items-center aspect-square">
@@ -460,7 +451,7 @@
             
             <!-- Left Column: Illustration -->
             <div class="flex justify-center">
-                <img src="assets/image/free-gift.png" alt="মুসলিম বিয়ে মেগা অফার" class="w-full max-w-5xl">
+                <img src="assets/image/free-gift.png" alt="মুসলিম বিয়ে মেগা অফার" class="w-full max-w-5xl animate-offer-illustration">
             </div>
 
             <!-- Right Column: Text Content -->
@@ -487,30 +478,31 @@
     </div>
 </section>
 
-<!--  How to Search Section  -->
-<section id="how-to-search" class="bg-gray-50 py-16 md:py-24">
+<!--  === How to Search Section  ===-->
+<section id="how-to-search" class="bg-gray-50 py-16 md:py-24 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4">
 
         <!-- Section Header -->
         <div class="text-center mb-12 md:mb-16">
-            <div class="relative inline-flex flex-col items-center">
-                
-                <!-- প্রথম শিরোনাম -->
-                <p class="text-xl md:text-5xl py-10 font-semibold text-primary">মুসলিমবিয়ে-প্ল্যাটফর্মে যেভাবে</p>
-                
-                <!-- দ্বিতীয় শিরোনাম -->
-                <h2 class="text-5xl md:text-6xl font-extrabold text-color">জীবনসঙ্গী খুঁজবেন</h2>
-
-                <!-- heard icon container -->
-                <div class="absolute -top-12 -right-12 md:-right-20 w-20 h-20">
-                    <!-- heard icon -->
-                    <img src="assets/image/heart.png" alt="Heart Icon" class="absolute top-0 right-0 h-35 w-auto z-10">
+            
+           
+            <div class="relative inline-block">
+           <div class="relative h-16 md:absolute md:h-auto md:-top-10 md:-right-10 ">
+                    <img src="assets/image/heart.png" alt="Heart Icon" class="absolute py-10 h-15 w-auto -top-8 left-1/2 -translate-x-1/2 md:relative md:left-20 md:top-auto md:translate-x-0 animate-heart-large">
                 </div>
 
+                <div class="relative z-10">
+                    
+                    <p class="text-xl md:text-5xl py-10 font-semibold text-primary">মুসলিমবিয়ে-প্ল্যাটফর্মে যেভাবে</p>
+                    
+                   
+                    <h2 class="text-5xl md:text-6xl font-extrabold text-color">জীবনসঙ্গী খুঁজবেন</h2>
+                </div>
             </div>
         </div>
 
-        <!-- Steps Grid -->
+       
+           <!-- Steps Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <!-- Step 1 -->
             <div class="bg-primary text-white rounded-2xl p-8 text-center shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
@@ -537,9 +529,9 @@
                 <p class="text-gray-200">দুই পরিবার সম্মত হলে বাকি আলোচনা এগিয়ে নিয়ে যান এবং শুভ কাজটি সম্পন্ন করুন।</p>
             </div>
         </div>
+
     </div>
 </section>
-
 
 
 <!-- FAQ Section -->
@@ -665,25 +657,41 @@
   </body>
       
     <!-- js start -->
-    
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
-        // ১. ন্যাভবারের টগল বাটনগুলোর জন্য কোড
-        const toggleButtons = document.querySelectorAll(".toggle-btn");
-        toggleButtons.forEach((clickedButton) => {
-          clickedButton.addEventListener("click", function () {
-            toggleButtons.forEach((btn) => {
-              btn.classList.remove("bg-primary", "text-white");
-              btn.classList.add("bg-white", "text-primary");
+    // 1. for nav bar
+    const toggleButtons = document.querySelectorAll(".toggle-btn");
+    if (toggleButtons.length) {
+        const desktopToggleButtons = document.querySelectorAll('nav .toggle-btn');
+        desktopToggleButtons.forEach((clickedButton) => {
+            clickedButton.addEventListener("click", function () {
+                desktopToggleButtons.forEach((btn) => {
+                    btn.classList.remove("bg-primary", "text-white");
+                    btn.classList.add("bg-white", "text-primary");
+                });
+                clickedButton.classList.remove("bg-white", "text-primary");
+                clickedButton.classList.add("bg-primary", "text-white");
             });
-            clickedButton.classList.remove("bg-white", "text-primary");
-            clickedButton.classList.add("bg-primary", "text-white");
-          });
         });
+    }
 
-        // ২. FAQ অ্যাকর্ডিয়নের জন্য কোড
-        const accordions = document.querySelectorAll('.accordion-toggle');
+    // 2.mobile manue open or colose
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = mobileMenuButton.querySelector('i');
+
+    if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            menuIcon.classList.toggle('fa-bars');
+            menuIcon.classList.toggle('fa-times');
+        });
+    }
+
+    // 3. for FAQ 
+    const accordions = document.querySelectorAll('.accordion-toggle');
+    if (accordions.length) {
         accordions.forEach(button => {
             button.addEventListener('click', () => {
                 const content = button.nextElementSibling;
@@ -699,32 +707,11 @@
                 }
             });
         });
+    }
 
-        // ৩. সংখ্যা গণনা অ্যানিমেশনের জন্য কোড
-        function animateCounters() {
-            const counters = document.querySelectorAll('.counter');
-            const animationDuration = 2000;
-
-            counters.forEach(counter => {
-                const target = +counter.getAttribute('data-target');
-                const suffix = counter.getAttribute('data-suffix') || '';
-                let currentNumber = 0;
-                const increment = target / (animationDuration / 16);
-
-                const updateCounter = () => {
-                    currentNumber += increment;
-                    if (currentNumber < target) {
-                        counter.innerText = Math.ceil(currentNumber).toLocaleString('en-US') + suffix;
-                        requestAnimationFrame(updateCounter);
-                    } else {
-                        counter.innerText = target.toLocaleString('en-US') + suffix;
-                    }
-                };
-                updateCounter();
-            });
-        }
-
-        const statsSection = document.querySelector('#success-stats');
+    // 4.degit count here
+    const statsGrid = document.querySelector('#stats-grid'); 
+    if (statsGrid) {
         let hasAnimated = false;
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -734,14 +721,39 @@
                     observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.5 });
+        }, { threshold: 0.2 }); 
+        
+        observer.observe(statsGrid); 
+    }
+    
+    function animateCounters() {
+        const counters = document.querySelectorAll('.counter');
+        const animationDuration = 2000; 
+        counters.forEach(counter => {
+            const target = +counter.getAttribute('data-target');
+            const suffix = counter.getAttribute('data-suffix') || '';
+            let currentNumber = 0;
+            
+            const stepTime = 16; 
+            const totalSteps = animationDuration / stepTime;
+            const increment = target / totalSteps;
 
-        if (statsSection) {
-            observer.observe(statsSection);
-        }
+            const updateCounter = () => {
+                currentNumber += increment;
+                if (currentNumber < target) {
+                    
+                    counter.innerText = Math.ceil(currentNumber).toLocaleString('en-US') + suffix;
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.innerText = target.toLocaleString('en-US') + suffix;
+                }
+            };
+            updateCounter();
+        });
+    }
 
-      });
-    </script>
+});
+</script>
     
 </body>
 </html>

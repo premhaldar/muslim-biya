@@ -79,3 +79,122 @@
     .copy-color{
         background-color: #771d83;
     }
+    
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* 2. animet for car */
+@keyframes carRunning {
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+    25% {
+        transform: translateY(-2px) rotate(0.5deg); 
+    }
+    50% {
+        transform: translateY(0) rotate(0);
+    }
+    75% {
+        transform: translateY(-2px) rotate(-0.5deg); 
+    }
+    100% {
+        transform: translateY(0) rotate(0);
+    }
+}
+
+/* .animate-car  */
+.animate-car {
+    animation: 
+        slideInFromRight 1.5s ease-out forwards,
+        carRunning 1.2s ease-in-out infinite 1.5s;
+}
+/* banner write Keyframes */
+@keyframes slideInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(30px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* .animate-text */
+.animate-text {
+    opacity: 0; 
+    animation: slideInFromBottom 1s ease-out forwards;
+}
+@keyframes subtle-float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px); 
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.animate-illustration {
+    animation: subtle-float 4s ease-in-out infinite; 
+}
+@keyframes gentle-sway {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(2deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
+.animate-offer-illustration {
+    animation: gentle-sway 3.5s ease-in-out infinite;
+    transform-origin: bottom center; 
+}
+@keyframes pulse-effect {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.03); 
+    }
+    100% {
+        transform: scale(1); 
+    }
+}
+
+.animate-guarantee {
+    animation: pulse-effect 3s ease-in-out infinite;
+}
+
+@keyframes heart-beat {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* heart animattion */
+.animate-heart-large {
+    animation: heart-beat 2s ease-in-out infinite;
+    margin-top: -60px !important;
+}
